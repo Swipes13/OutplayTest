@@ -38,13 +38,11 @@ public class Player : MonoBehaviour {
         }
     }
     private void Die() {
-        Debug.Log("[DIE] KEKKOOO");
         died = true;
         pSystem.Play();
         audioSource.Play();
     }
     private void OnTriggerEnter(Collider other) {
-        Debug.Log($"[TRUGGER] {other.CompareTag("Enemy")}");
         if (other.CompareTag("Enemy")) {
             Die();
         }
